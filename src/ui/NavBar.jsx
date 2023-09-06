@@ -1,13 +1,6 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
-const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'About Us', href: '#', current: false },
-  { name: 'Shop', href: '#', current: false },
-  { name: 'Contact Us', href: '#', current: false },
-]
+import {navigation} from './navigation'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -34,7 +27,7 @@ export default function Example() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <h1 className='font-bold text-2xl text-white'>Ohsehn</h1>
+                  <a href='/'><h1 className='font-bold text-2xl text-white'>Ohsehn</h1></a>
                   {/* <img
                     className="h-8 w-auto"
                     src={require("../images/ohsehn_logo.webp")}
@@ -48,7 +41,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-800 text-white border-1 border-orange-950 rounded-lg' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-gray-700 text-white border-1 border-orange-950 rounded-lg' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}

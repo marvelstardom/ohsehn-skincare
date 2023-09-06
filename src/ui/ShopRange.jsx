@@ -14,7 +14,7 @@ export default function ShopRange() {
                             <div className='' style={{ background: `rgba(${81}, ${57}, ${150},${0.738})` }}>
                                 <div key={index} style={{ backgroundImage: `url(${shop.bgImg})`}} className='bg-cover bg-no-repeat bg-center h-[400px] flex flex-col justify-center items-center'>
                                     <h1 className='font-bold text-5xl mb-4 text-white'>{shop.productName}</h1>
-                                    <a href='/' className='border-2 px-4 py-2 rounded-full text-xl text-white'>Shop Now</a>
+                                    <a href='/shop' className='border-2 px-4 py-2 rounded-full text-xl text-white'>Shop Now</a>
                                 </div>
                             </div>
                         )

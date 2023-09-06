@@ -13,11 +13,13 @@ export default function Footer() {
         {
             bgImages.map((img, index) => {
                 return (
-                    <div className="py-16 px-24 bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${img.img2})`}}>
+                    <div className="py-16 px-24 bg-black bg-cover bg-no-repeat bg-center" 
+                    // style={{backgroundImage: `url(${img.img2})`}}
+                    >
                         <div key={index} className='grid grid-cols-3 justify-start gap-x-12'>  
                             <div className='text-left text-white'>
-                                <h1 className='font-bold text-3xl'>Ohsehn Collections</h1>
-                                <p className='text-sm'><i>Your Original Skincare E-Commerce Store!</i></p>
+                                <h1 className='font-bold text-3xl'>Ohsehn</h1>
+                                <p className='text-sm'><i>Your Original Skincare Store!</i></p>
                                 <p className='mt-14'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias vitae nobis unde aut libero quasi necessitatibus quaerat fugiat, maiores voluptates? Commodi voluptates quisquam ullam vero ab provident neque accusamus.</p>
                             </div>
                             <div className='text-left text-white flex flex-col justify-start items-center'>
