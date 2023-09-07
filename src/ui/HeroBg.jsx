@@ -9,7 +9,7 @@ export default function HeroBg() {
   // const productBrands = ["Uncover", "Dang", "Konyin", "Arami", "Okunriin"]
     const bgImages = [
         {
-            img1: require("../images/konyin2.jpg"),
+            img1: require("../images/dang4dark2.jpg"),
             img2: require("../images/black-bg2.jpg"),
             img3: require("../images/black-bg3.jpg"),
         }
@@ -19,12 +19,12 @@ export default function HeroBg() {
       {
         bgImages.map((img, index) => {
             return (
-                <div id={index} className='h-[600px] flex flex-col items-center justify-center' style={{backgroundImage: `url(${img.img1})`}}>
+                <div id={index} className='h-[500px] flex flex-col items-center justify-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${img.img1})`}}>
                     {
                       navigation.map((nav) => {
                         return (
                           <div id={index}>
-                            {nav.name ? <h1 className='text-6xl font-bold'>{nav?.name}</h1> : null}
+                            {nav.href === "/shop" ? <h1 className='text-8xl font-bold text-white'>{nav.name}</h1> : null}
                           </div>
                         )
                       })
