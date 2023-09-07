@@ -24,11 +24,11 @@ export default function Footer() {
                             </div>
                             <div className='text-left text-white flex flex-col justify-start items-center'>
                                 <h1 className='font-bold text-xl mb-6 -ml-5'>Links</h1>
-                                <ul className='flex flex-col gap-4'>
+                                <ul key="index" className='flex flex-col gap-4'>
                                     <li><a href='/'>Home</a></li>
-                                    <li><a href='/'>About</a></li>
-                                    <li><a href='/'>Shop</a></li>
-                                    <li><a href='/'>Contact</a></li>
+                                    <li><a href='/about'>About</a></li>
+                                    <li><a href='/shop'>Shop</a></li>
+                                    <li><a href='/contact'>Contact</a></li>
                                 </ul>
                             </div>
                             <div className='text-left text-white'>

@@ -1,25 +1,64 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import HeroBg from './ui/HeroBg'
+import React, { useState, useEffect } from 'react'
+// import { productBrands } from './ui/brands'
 import { ProductItems } from './ui/ProductItems'
 import ReadMoreReact from 'read-more-react/dist/components/ReadMoreReact'
+// import { Products } from './ui/Products'
+// import axios from 'axios'
 
-export default function Shop() {
+export default function BrandProduct() {
+  // const [title, setTitle] = useState("")
   const [featuredItems, setFeaturedItems] = useState(ProductItems)
     
     useEffect(() => {
         setFeaturedItems(featuredItems)
     }, [featuredItems])
 
-  return (
-    <section>
-      <HeroBg />
-      <div className='py-32 px-24 flex flex-row flex-wrap gap-8'>
+  const bgImages = [
         {
-          featuredItems.map((productItem, index) => (
-            <div key={index} className='flex flex-row gap-8 flex-wrap'>
-              <div key={index} className="mb-5 flex flex-row gap-4 max-w-[19rem] w-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-2xl dark:border-[#1b2e4b] dark:bg-black dark:shadow-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-              { productItem.productImg.map((image, index) => {
+            img1: require("./images/dang5dark2.png"),
+            img2: require("./images/black-bg2.jpg"),
+            img3: require("./images/black-bg3.jpg"),
+        }
+    ]
+    // useEffect(() => {
+    //   axios.get(`http://localhost:3000/shop/${ProductItems.id}`).then((res => [
+    //         setTitle(res.title),
+    //       ]))
+    //       .catch(error=>console.log(error))
+    // }, [title])
+
+  return (
+    <div id='brand'>
+        {
+          bgImages.map((image, index) => (
+            <div key={index} className='h-[600px] flex items-center justify-center bg-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${image.img1})`}}>
+              <div>
+                {/* <h1>{Object.keys(Products)}</h1> */}
+                {/* <h1>{title}</h1> */}
+              </div>
+              <div className=''>
+              {
+                ProductItems
+                .map((product) => (
+                  <div key={product.brandName} className=''>
+                    {
+                      product.id.valueOf(1) === "dang" ? <h1 className='font-bold text-8xl text-white'>{product.brandName}</h1> : null
+                    }
+                  </div>
+                ))
+              }
+              </div>
+              
+            </div>
+          ))
+        }
+        <div className='py-32 px-24'>
+          <h1 className='font-bold text-5xl text-left mb-16'>Dang Products in stock</h1>
+          <div className='flex flex-row flex-wrap gap-8'>
+            { featuredItems.map((productItem, index) => (
+            <div key={index} className=''>
+              <div className="mb-5 flex flex-row gap-2 max-w-[19rem] w-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-2xl dark:border-[#1b2e4b] dark:bg-black dark:shadow-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+              { productItem.brandName === "Dang" ? productItem.productImg.map((image, index) => {
                           return (
                               <div key={index} className="py-7 px-6 text-left">
                                   <div className="-mt-7 mb-7 -mx-6 rounded-tl rounded-tr h-[250px] overflow-hidden">
@@ -37,13 +76,14 @@ export default function Shop() {
                                   </button>
                                   </div>
                               </div>
-                          )})
+                          )}) : null
                       }
               </div>
             </div>
           ))
         }
-      </div>
-    </section>
+          </div>
+        </div>
+    </div>
   )
 }

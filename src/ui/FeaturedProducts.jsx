@@ -14,14 +14,14 @@ export default function FeaturedProducts() {
     }, [featuredItems, featuredImages])
     
   return (
-    <section className='bg-gray-950 py-36'>
+    <section className='dark:bg-black bg-white pt-36'>
         <div>
-            <h1 className='text-white font-bold text-6xl mb-4'>Featured Products</h1>
+            <h1 className='dark:text-white text-black font-bold text-6xl mb-4'>Featured Products</h1>
             <p className='uppercase text-gray-400 text-sm mb-16'>Beauty  //  Original  //  Elegance & More </p>
             <div className="mx-12 flex flex-row flex-wrap gap-6 justify-center">
                 {
                     featuredItems.map((productItem, index) => (
-                        <div key={index} className="mb-5 flex flex-row gap-4 max-w-[19rem] w-full bg-white rounded-lg border border-white border-black dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
+                        <div key={index} className="mb-5 flex flex-row gap-4 max-w-[19rem] w-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-2xl dark:border-black dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                             { productItem.productImg.map((image, index) => {
                                 return (
                                     <div key={index} className="py-7 px-6 text-left">

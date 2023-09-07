@@ -1,5 +1,6 @@
 export const ProductItems = [
     {
+        id: "uncover",
         brandName: "Uncover",
         name: "Baobab Glow-C Serum",
         price: "₦ 16,500.00",
@@ -16,6 +17,7 @@ export const ProductItems = [
         ]
     },
     {
+        id: "Arami",
         brandName: "Arami Essentials",
         name: "Eden’s Elixir - Refill Forever Set",
         price: "₦18,900.00 – ₦19,400.00",
@@ -32,6 +34,7 @@ export const ProductItems = [
         ],
     },
     {
+        id: "dang",
         brandName: "Dang",
         name: "DANG! Ageless Mini Set (Face)",
         price: "₦15,100.00",
@@ -80,6 +83,7 @@ export const ProductItems = [
         ]
     },
     {
+        id: "Konyin",
         brandName: "Konyin",
         name: "Anti Acne Set & Anti Pigmentation Set",
         price: "₦27,500.00",
@@ -96,6 +100,7 @@ export const ProductItems = [
         ]
     },
     {
+        id: "Okunriin",
         brandName: "Okunriin",
         name: "Beard Care Kit",
         price: "₦26 500.00",
@@ -119,6 +124,7 @@ export const ProductItems = [
         ]
     },
     {
+        id: "Dang",
         brandName: "Dang",
         name: "Hyperpigmentation Face & Body Set",
         price: "₦68,541.00",
@@ -135,6 +141,7 @@ export const ProductItems = [
         ]
     },
     {
+        id: "Uncover",
         brandName: "Uncover",
         name: "Essentials Skincare Kit",
         price: "₦ 29,500.00",
@@ -151,6 +158,7 @@ export const ProductItems = [
         ]
     },
     {
+        id: "Okunriin",
         brandName: "Okunriin",
         name: "Mr. Detail Pro",
         price: "₦126,000.00",
@@ -167,3 +175,6 @@ export const ProductItems = [
         ]
     },
 ]
+
+// quantity
+// you may also like tab

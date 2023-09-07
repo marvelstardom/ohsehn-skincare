@@ -56,7 +56,7 @@ export function Slider () {
             autoplay={{ delay: 4000 }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
-            className="swiper w-auto h-[685px] bg-black"
+            className="swiper w-auto h-[750px] bg-black"
             id="slider2"
         >
             <div className="swiper-wrapper">
@@ -69,8 +69,8 @@ export function Slider () {
                                 <p className="sm:mt-10 mt-1 w-1/2 text-xl sm:block lg:block hidden font-medium">
                                     {item.slug}
                                 </p>
-                                <button type="button" className="uppercase mt-4 bg-white text-black border-2 border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white">
-                                    Learn more
+                                <button type="button" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 uppercase mt-4 bg-white text-black border-2 border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                                    Discover more
                                 </button>
                             </div>
                         </SwiperSlide>

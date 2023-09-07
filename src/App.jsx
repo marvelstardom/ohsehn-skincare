@@ -5,8 +5,11 @@ import NavBar from './ui/NavBar'
 import Home from './Home';
 import About from './About';
 import Shop from './Shop';
+import Footer from './ui/Footer';
 import Contact from './Contact';
 import { useLocation } from 'react-router-dom';
+import BrandProduct from './BrandProduct';
+import { productBrands } from './ui/brands';
 
 function App() {
   const location = useLocation();
@@ -14,6 +17,8 @@ function App() {
   console.log('hash', location.hash);
   console.log('pathname', location.pathname);
   console.log('search', location.search);
+
+  // const productBrands = ["Uncover", "Dang", "Konyin", "Arami", "Okunriin"]
 
   return (
         <div className="App">
@@ -23,7 +28,13 @@ function App() {
                   <Route exact path='/about' element={< About />}></Route>
                   <Route exact path='/shop' element={< Shop />}></Route>
                   <Route exact path='/contact' element={< Contact />}></Route>
-          </Routes>
+                  {
+                    productBrands.map((product, id) => (
+                      <Route key={id} exact path={`/shop/${product.name}`} element={< BrandProduct />}></Route>
+                    ))
+                  }
+          </Routes>  
+          <Footer/>
         </div>
   );
 }
