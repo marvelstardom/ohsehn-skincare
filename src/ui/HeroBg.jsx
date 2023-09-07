@@ -1,12 +1,11 @@
 import React from 'react'
 import { navigation } from './navigation'
-import { productBrands } from './brands'
+// import { productBrands } from './brands'
 import { Link } from 'react-router-dom'
-
 // import { ProductItems } from './ProductItems'
+import { Products } from './Products'
 
 export default function HeroBg() {
-  // const productBrands = ["Uncover", "Dang", "Konyin", "Arami", "Okunriin"]
     const bgImages = [
         {
             img1: require("../images/dang4dark2.jpg"),
@@ -19,7 +18,7 @@ export default function HeroBg() {
       {
         bgImages.map((img, index) => {
             return (
-                <div id={index} className='h-[500px] flex flex-col items-center justify-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${img.img1})`}}>
+                <div id={index} className='h-[590px] flex flex-col items-center justify-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${img.img1})`}}>
                     {
                       navigation.map((nav) => {
                         return (
@@ -35,13 +34,21 @@ export default function HeroBg() {
       }
       <div className='grid grid-cols-5'> 
         {
-          productBrands.map((product, id) => {
+          Products.map((product) => {
             return (
-              <ul className='' key={id.toString()}>
-                    <li className='bg-black text-white dark:text-black border-r border-white dark:bg-gray-400 w-full p-6'>
-                  <Link to={`/shop/${product.name}`}><h1>{product.name}</h1></Link>
-                </li>
-              </ul>
+              <div className='mb-2 mt-1' key={product.brandName}>
+                  {
+                    Object.entries(product.productImg).map(([key, value]) => (
+                      <Link to={`/shop/${product.brandName}`}>
+                        <ul className='cursor-pointer'>
+                          <li key={key} style={{backgroundImage: `url(${value.img1})`}} className='bg-center bg-cover bg-no-repeat text-white dark:text-black border-r-4 flex items-center justify-center w-full p-16 h-[150px]'>
+                              <h1 className='font-bold text-4xl'>{product.brandName}</h1>
+                          </li>
+                        </ul>
+                      </Link>
+                    ))
+                  }
+              </div>
             )
           })
         }

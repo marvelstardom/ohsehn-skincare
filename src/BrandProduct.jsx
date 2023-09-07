@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 // import { productBrands } from './ui/brands'
 import { ProductItems } from './ui/ProductItems'
 import ReadMoreReact from 'read-more-react/dist/components/ReadMoreReact'
+import { Link } from 'react-router-dom'
 // import { Products } from './ui/Products'
 // import axios from 'axios'
 
@@ -32,14 +33,9 @@ export default function BrandProduct() {
         {
           bgImages.map((image, index) => (
             <div key={index} className='h-[600px] flex items-center justify-center bg-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${image.img1})`}}>
-              <div>
-                {/* <h1>{Object.keys(Products)}</h1> */}
-                {/* <h1>{title}</h1> */}
-              </div>
               <div className=''>
               {
-                ProductItems
-                .map((product) => (
+                ProductItems.map((product) => (
                   <div key={product.brandName} className=''>
                     {
                       product.id.valueOf(1) === "dang" ? <h1 className='font-bold text-8xl text-white'>{product.brandName}</h1> : null
@@ -57,7 +53,7 @@ export default function BrandProduct() {
           <div className='flex flex-row flex-wrap gap-8'>
             { featuredItems.map((productItem, index) => (
             <div key={index} className=''>
-              <div className="mb-5 flex flex-row gap-2 max-w-[19rem] w-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-2xl dark:border-[#1b2e4b] dark:bg-black dark:shadow-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+              <Link to={`/shop/${productItem.brandName}/product`} className="mb-5 flex flex-row gap-2 max-w-[19rem] w-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-2xl dark:border-[#1b2e4b] dark:bg-black dark:shadow-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               { productItem.brandName === "Dang" ? productItem.productImg.map((image, index) => {
                           return (
                               <div key={index} className="py-7 px-6 text-left">
@@ -78,7 +74,7 @@ export default function BrandProduct() {
                               </div>
                           )}) : null
                       }
-              </div>
+              </Link>
             </div>
           ))
         }

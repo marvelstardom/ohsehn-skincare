@@ -18,7 +18,7 @@ export const ProductItems = [
     },
     {
         id: "Arami",
-        brandName: "Arami Essentials",
+        brandName: "Arami-Essentials",
         name: "Eden’s Elixir - Refill Forever Set",
         price: "₦18,900.00 – ₦19,400.00",
         shortDescription: "This product is packaged in a sustainable pouch as well as a 250ml glass bottle and can be used to refill your glass bottle here to save money Save 10% when you buy this set instead of the individual products.",
@@ -158,7 +158,7 @@ export const ProductItems = [
         ]
     },
     {
-        id: "Okunriin",
+        id: "okunrin",
         brandName: "Okunriin",
         name: "Mr. Detail Pro",
         price: "₦126,000.00",

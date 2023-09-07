@@ -9,7 +9,10 @@ import Footer from './ui/Footer';
 import Contact from './Contact';
 import { useLocation } from 'react-router-dom';
 import BrandProduct from './BrandProduct';
-import { productBrands } from './ui/brands';
+import SingleProduct from './SingleProduct';
+// import { productBrands } from './ui/brands';
+// import { ProductItems } from './ui/ProductItems';
+import { Products } from './ui/Products';
 
 function App() {
   const location = useLocation();
@@ -29,8 +32,13 @@ function App() {
                   <Route exact path='/shop' element={< Shop />}></Route>
                   <Route exact path='/contact' element={< Contact />}></Route>
                   {
-                    productBrands.map((product, id) => (
-                      <Route key={id} exact path={`/shop/${product.name}`} element={< BrandProduct />}></Route>
+                    Products.map((product) => (
+                      <Route key={product.brandName} exact path={`/shop/${product.brandName}`} element={< BrandProduct />}></Route>
+                    ))
+                  }
+                  {
+                    Products.map((product) => (
+                      <Route key={product.brandName} exact path={`/shop/${product.brandName}/product`} element={< SingleProduct />} ></Route>
                     ))
                   }
           </Routes>  
