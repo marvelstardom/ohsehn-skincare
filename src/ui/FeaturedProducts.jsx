@@ -14,10 +14,10 @@ export default function FeaturedProducts() {
     }, [featuredItems, featuredImages])
     
   return (
-    <section className='dark:bg-black bg-white pt-36'>
+    <section className='dark:bg-black bg-white lg:pt-36 pt-28'>
         <div>
-            <h1 className='dark:text-white text-black font-bold text-6xl mb-4'>Featured Products</h1>
-            <p className='uppercase text-gray-400 text-sm mb-16'>Beauty  //  Original  //  Elegance & More </p>
+            <h1 className='dark:text-white text-black font-bold lg:text-6xl text-4xl mb-4'>Featured Products</h1>
+            <p className='uppercase text-gray-400 lg:text-sm text-xs lg:mb-16 mb-12'>Beauty  //  Original  //  Elegance & More </p>
             <div className="mx-12 flex flex-row flex-wrap gap-6 justify-center">
                 {
                     featuredItems.map((productItem, index) => (
