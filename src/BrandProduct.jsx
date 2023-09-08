@@ -48,10 +48,10 @@ export default function BrandProduct() {
         { featuredItems.map((product) => (
           <div className='' key={product.id}>
           {/* <h1 className='font-bold text-5xl text-left mb-16'>{product.brandName} Products in stock</h1> */}
-            <div className='flex flex-row flex-wrap gap-8'>
+            <div>
               {
                 product.id === 1 &&
-                <div>
+                <div className='flex flex-row flex-wrap gap-8'>
                   { Object.entries(product.productType).map(([key, value]) => {
                   return (
                   <Link key={key} to={`/shop/${product.brandName}/product`} className="mb-5 flex flex-row gap-2 max-w-[19rem] w-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-2xl dark:border-[#1b2e4b] dark:bg-black dark:shadow-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
