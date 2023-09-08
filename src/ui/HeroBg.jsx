@@ -18,7 +18,7 @@ export default function HeroBg() {
       {
         bgImages.map((img, index) => {
             return (
-                <div id={index} className='h-[590px] flex flex-col items-center justify-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${img.img1})`}}>
+                <div id={index} className='lg:h-[590px] h-[400px] flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat' style={{backgroundImage: `url(${img.img1})`}}>
                     {
                       navigation.map((nav) => {
                         return (
@@ -32,7 +32,7 @@ export default function HeroBg() {
             )
         })
       }
-      <div className='grid grid-cols-5'> 
+      <div className='lg:grid lg:grid-cols-5'> 
         {
           Products.map((product) => {
             return (
@@ -40,8 +40,8 @@ export default function HeroBg() {
                   {
                     Object.entries(product.productImg).map(([key, value]) => (
                       <Link to={`/shop/${product.brandName}`}>
-                        <ul className='cursor-pointer'>
-                          <li key={key} style={{backgroundImage: `url(${value.img1})`}} className='bg-center bg-cover bg-no-repeat text-white dark:text-black border-r-4 flex items-center justify-center w-full p-16 h-[150px]'>
+                        <ul className='cursor-pointer '>
+                          <li key={key} style={{backgroundImage: `url(${value.img1})`}} className='bg-center bg-cover bg-no-repeat text-white dark:text-black border-r-4 lg:flex lg:flex-row flex items-center justify-center lg:w-full p-16 h-[150px]'>
                               <h1 className='font-bold text-4xl'>{product.brandName}</h1>
                           </li>
                         </ul>

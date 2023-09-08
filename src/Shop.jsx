@@ -16,8 +16,8 @@ export default function Shop() {
   return (
     <section>
       <HeroBg />
-      <div className='py-32 px-24'>
-        <h1 className='font-bold text-5xl text-left mb-14'>Featured Products</h1>
+      <div className='lg:py-32 lg:px-24 py-24 px-6'>
+        <h1 className='font-bold text-5xl text-center mb-14'>Featured Products</h1>
         <div className='flex flex-row flex-wrap gap-8'>
           { featuredItems.map((productItem, index) => (
             <div key={index} className='flex flex-row gap-8 flex-wrap'>
