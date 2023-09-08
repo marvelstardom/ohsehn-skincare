@@ -55,7 +55,7 @@ export function Slider () {
             autoplay={{ delay: 4000 }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
-            className="swiper w-auto sm:w-full sm:h-[500px] lg:h-[750px] bg-black sm:bg-cover"
+            className="swiper w-auto h-[400px] lg:h-[750px] bg-black sm:bg-cover"
             id="slider2"
         >
             <div className="swiper-wrapper">
@@ -63,8 +63,8 @@ export function Slider () {
                     return (
                         <SwiperSlide key={item.name} className=''>
                             <img src={item.image} className="bg-center w-full object-cover" alt="itemImage" />
-                            <div className="flex flex-col justify-between items-center text-center w-[inherit] absolute z-[999] text-white top-1/3 ltr:left-12 rtl:right-12">
-                                <div className="lg:text-7xl text-5xl font-bold">{item.name}</div>
+                            <div className="flex flex-col justify-between items-center text-center w-[inherit] absolute z-[999] text-white top-1/3 ltr:left-12 rtl:right-12 lg-mt-0 mt-8">
+                                <div className="lg:text-7xl text-4xl font-bold">{item.name}</div>
                                 <p className="sm:mt-0 sm:text-md mt-1 w-1/2 text-xl sm:block lg:block hidden font-medium">
                                     {item.slug}
                                 </p>

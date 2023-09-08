@@ -34,7 +34,7 @@ export default function NavBar() {
                     alt="Your Company"
                   /> */}
                 </div>
-                <div className="hidden sm:ml-80 sm:block">
+                <div className="hidden sm:ml-96 sm:block">
                   <div className="flex space-x-6">
                     {navigation.map((item) => (
                       <a
