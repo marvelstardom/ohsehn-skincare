@@ -28,7 +28,7 @@ export default function FeaturedProducts() {
                                         <div className="-mt-7 mb-7 -mx-6 rounded-tl rounded-tr h-[250px] overflow-hidden">
                                             <img src={image.img1} alt="cover" className="w-full h-[250px] bg-center bg-center" />
                                         </div>
-                                        <h5 className="text-[#3b3f5c] text-xl text-left font-semibold mb-4 dark:text-white-light">{productItem.name}</h5>
+                                        <h1 className="text-black text-xl text-left font-semibold mb-4 dark:text-white-light">{productItem.name}</h1>
                                         <ReadMoreReact className="text-left" text={productItem.shortDescription} min={50} ideal={100}max={300} readMoreText={<a href='/' className='cursor-pointer text-gray-400'>Read More</a>} />
                                         <p className='text-gray-800 text-left mt-6'>Category: <b>{productItem.category}</b> </p>
                                         <p className='text-gray-800 text-left mb-2'>Price: <b>{productItem.price}</b></p>

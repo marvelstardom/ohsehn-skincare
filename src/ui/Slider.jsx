@@ -63,12 +63,12 @@ export function Slider () {
                     return (
                         <SwiperSlide key={item.name} className=''>
                             <img src={item.image} className="bg-center w-full object-cover" alt="itemImage" />
-                            <div className="flex flex-col justify-between items-center text-center w-[inherit] absolute z-[999] text-white top-1/3 ltr:left-12 rtl:right-12 lg-mt-0 mt-8">
-                                <div className="lg:text-7xl text-4xl font-bold">{item.name}</div>
+                            <div className="flex flex-col justify-between items-center text-center w-[inherit] absolute z-[999] text-white top-1/3 ltr:left-12 rtl:right-12 mt-8 lg:px-0 px-4">
+                                <h1 className="lg:text-8xl text-4xl font-bold mb-4">{item.name}</h1>
                                 <p className="sm:mt-0 sm:text-md mt-1 w-1/2 text-xl sm:block lg:block hidden font-medium">
                                     {item.slug}
                                 </p>
-                                <Link to={`/shop/`} className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 uppercase mt-4 bg-white text-black border-2 border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                                <Link to={`/shop/`} className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 uppercase mt-4 bg-white text-black border-2 border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white text-sm">
                                     Discover more
                                 </Link>
                             </div>
